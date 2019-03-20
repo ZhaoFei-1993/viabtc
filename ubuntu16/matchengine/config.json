@@ -1,0 +1,111 @@
+{
+    "debug": true,
+    "process": {
+        "file_limit": 1000000,
+        "core_limit": 1000000000
+    },
+    "log": {
+        "path": "/dev/viabtc_log/matchengine",
+        "flag": "fatal,error,warn,info,debug,trace",
+        "num": 10
+    },
+    "alert": {
+        "host": "matchengine",
+        "addr": "127.0.0.1:4444"
+    },
+    "svr": {
+        "bind": [
+            "tcp@0.0.0.0:7316",
+            "udp@0.0.0.0:7316"
+        ],
+        "buf_limit": 100,
+        "max_pkg_size": 10240,
+        "heartbeat_check": false
+    },
+    "cli": "tcp@127.0.0.1:7317",
+    "db_log": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "pass": "Japandragon33$$",
+        "name": "trade"
+    },
+    "db_history": {
+        "host": "127.0.0.1",
+        "user": "root",
+        "pass": "Japandragon33$$",
+        "name": "trade"
+    },
+    "assets": [
+        {
+            "name": "ETH",
+            "prec_save": 20,
+            "prec_show": 8
+        }, {
+            "name": "XRP",
+            "prec_save": 20,
+            "prec_show": 8
+        }, {
+            "name": "BCH-ABC",
+            "prec_save": 20,
+            "prec_show": 8
+        }, {
+            "name": "ARQ",
+            "prec_save": 20,
+            "prec_show": 8
+        },{
+            "name": "BTC",
+            "prec_save": 20,
+            "prec_show": 8
+        }
+    ],
+    "markets": [
+        {
+            "name": "ETH/BTC",
+            "stock": {
+                "name": "ETH",
+                "prec": 8
+            },
+            "money": {
+                "name": "BTC",
+                "prec": 8
+            },
+            "min_amount": "0.00000001"
+        }, {
+            "name": "XRP/BTC",
+            "stock": {
+                "name": "XRP",
+                "prec": 8
+            },
+            "money": {
+                "name": "BTC",
+                "prec": 8
+            },
+            "min_amount": "0.00000001"
+        }, {
+            "name": "BCH-ABC/BTC",
+            "stock": {
+                "name": "BCH-ABC",
+                "prec": 8
+            },
+            "money": {
+                "name": "BTC",
+                "prec": 8
+            },
+            "min_amount": "0.00000001"
+        },{
+            "name": "ARQ/BTC",
+            "stock": {
+                "name": "ARQ",
+                "prec": 8
+            },
+            "money": {
+                "name": "BTC",
+                "prec": 8
+            },
+            "min_amount": "0.00000001"
+        }
+    ],
+    "brokers": "127.0.0.1:9092",
+    "slice_interval": 3600,
+    "slice_keeptime": 259200 
+}
